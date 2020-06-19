@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database-brea:
+    image: postgres:10.10
+    ports:
+      - 9000:5432
+    environment:
+      - POSTGRES_USER=breaio
+      - POSTGRES_DB=breaio
+
+  web:
+    build: ./web
+    ports:
+      - 3000:3000
