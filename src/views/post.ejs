@@ -1,0 +1,26 @@
+<%- include('partial/header.ejs'); %>
+    <section class="hero-home dark-overlay mb-4">
+      <img src="/img/photo/photo-1467987506553-8f3916508521.jpg" alt="" class="img-fluid">
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-8 col-lg-10 mx-auto text-black">
+            <h1 class="text-serif font-weight-bold mb-2"><%= post.title %></h1>
+          </div>
+          <div class="col-xl-8 col-lg-10 mx-auto">           
+            <p class="py-1 mb-2 mt-2 text-muted text-center font-weight-light">
+              <a href="">
+                <img src="<%= post.user.avatar %>" alt="" class="avatar mr-2">
+              </a> 
+              Escrito por <a href="#" class="font-weight-bold"><%= post.user.name %> <%= post.user.lastname %></a>
+              <span class="mx-1">|</span> <%= post.createdAt %>
+              <span class="mx-1">|</span>
+              <a href="#" class="text-muted">2 comments</a>
+            </p>
+            <%- post.text %>
+          </div>
+        </div>
+      </div>
+  </section>
+<%- include('partial/footer.ejs') %>

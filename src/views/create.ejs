@@ -1,0 +1,32 @@
+<%- include('partial/header.ejs'); %>
+  <form action="/<%= slug %>/create" method="post" enctype="multipart/form-data">
+    <section class="py-4 mt-4 bg-gray-100"> 
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <!-- blog item start-->
+          <div class="col-lg-8 col-sm-8 mb-3 ml-1 mr-1">
+            <textarea name="title" id="title" placeholder="Título de la publicación" required="required" class="form-control title"></textarea>
+            <textarea name="sinopsis" id="sinopsis" placeholder="Breve descripción." required="required" class="form-control title mt-2 mb-2"></textarea>
+            <input type="file" accept="image/*" name="image" >
+            <textarea id="summernote" name="body"></textarea>
+          </div>
+        </div>
+          <!-- blog item end-->
+        </div>
+      </div>
+    </section>
+    <section class="fixed-bottom shadow py-2 bg-white">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-left">
+            <p class="text-sm mb-md-0"></p>
+          </div>
+          <div class="col-md-6 text-md-right">
+            <button type="submit" class="btn btn-outline-muted" name="saveOnly">SÓLO GUARDAR</button>
+            <button type="submit" class="btn btn-success" name="public">PUBLICAR</button>
+          </div>
+        </div>
+      </div>  
+    </section>
+  </form>
+<%- include('partial/footer.ejs') %>
