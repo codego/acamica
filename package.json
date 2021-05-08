@@ -38,7 +38,7 @@
     "pm2": "^4.4.0",
     "reflect-metadata": "^0.1.13",
     "tslint-config-airbnb": "^5.11.2",
-    "typeorm": "0.2.24"
+    "typeorm": "0.2.25"
   },
   "scripts": {
     "tsc": "tsc",
